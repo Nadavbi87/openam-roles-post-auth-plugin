@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bsmooth</groupId>
+    <artifactId>openam-roles-post-auth-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.servlet.api>2.5</version.servlet.api>
+        <version.openam>11.0.3</version.openam>
+        <version.mysql.connector>5.1.39</version.mysql.connector>
+        <version.hibernate>5.3.7.Final</version.hibernate>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>forgerock-community</id>
+            <url>http://maven.forgerock.org/repo/community/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.forgerock.ce.openam</groupId>
+            <artifactId>openam-core</artifactId>
+            <version>${version.openam}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.forgerock.ce.openam</groupId>
+            <artifactId>openam-shared</artifactId>
+            <version>${version.openam}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${version.hibernate}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${version.mysql.connector}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${version.servlet.api}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
